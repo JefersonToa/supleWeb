@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>home</title>
+</head>
+<body>
+     <div class="tarjeta">
+        <h2>Calculadora de Propina</h2>
+        <label for="monto">Monto total de la cuenta $</label>
+        <input type="number" id="monto" placeholder="Ej. 50.00">
+        <div id="errorMonto" class="error"></div>
+
+        <label for="porcentaje">Selecciona el porcentaje de propina %</label>
+        <select id="porcentaje">
+            <option value="0.1">10%</option>
+            <option value="0.15">15%</option>
+            <option value="0.2">20%</option>
+        </select>
+
+        <button onclick="calcularPropina()">Calcular propina</button>
+
+        <div class="card-result" id="resultado">
+            <p><strong>Total de la cuenta:</strong> $<span id="cuenta"></span></p>
+            <p><strong>Propina:</strong> $<span id="propina"></span></p>
+            <p><strong>Total a pagar:</strong> $<span id="total"></span></p>
+        </div>
+    </div>
+    <script src="/js/calcular.js"></script>
+
+</body>
+</html>
